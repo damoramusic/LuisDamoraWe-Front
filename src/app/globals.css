@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    @apply bg-primary font-michroma text-white;
+}
+.pretitle {
+  @apply font-michroma text-[30px] text-accent leading-none;
+}
+h2 {
+  @apply text-[32px] xl:text-[38px] font-semibold leading-tight;
+}
+.btn {
+  @apply w-full rounded-full cursor-pointer flex justify-center items-center  font-medium transition-all;
+}
+.btn-xs {
+  @apply w-[110px] h-[35px];
+}
+.btn-sm {
+  @apply w-[146px] h-[50px];
+}
+.btn-lg {
+  @apply w-[160px] h-[54px];
+}
+.btn-accent {
+  @apply bg-accent hover:bg-white text-white hover:text-accent hover:border-accent hover:border-[2px] transition-all duration-300;
+}
+.btn-accent .cls-1 {
+  width: 70px !important;
+  height: 25px !important;
+  fill: white !important;
+  transition: all 0.3s ease-in-out;
+}
+.btn-accent:hover .cls-1 {
+  fill: #339CE6 !important;
+  transition: all 0.3s ease-in-out;
+}
+.btn-white {
+  @apply bg-white hover:bg-white/80 text-primary;
+}
+.section {
+  @apply  py-12 xl:py-24;
+}
+/* LOADER */
+.loader {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #339CE6;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+/* Main Player */
+.rap-progress {
+  @apply !bg-[#339CE6];
+}
+.rap-pin {
+  @apply !bg-white;
+}
+.rap-container .rap-slider .rap-progress .rap-pin {
+  @apply !w-[14px] !h-[14px] !bg-white;
+}
+.rap-container .rap-slider .rap-progress .rap-pin:hover {
+  @apply scale-[1.2] transition-all duration-300;
+}
+.rap-container {
+  @apply  !p-0;
+}
+.rap-container .rap-pp-button svg{
+  @apply  w-[14px];
+}
+.rap-container .rap-volume .rap-volume-btn svg {
+  @apply  w-[22px];
+}
+.rap-container .rap-pp-button svg path,
+.rap-container .rap-volume .rap-volume-btn svg path {
+  @apply  fill-accent ;
+}
+.rap-current-time,
+.rap-total-time {
+  @apply font-montserrat text-[13px] font-medium;
+}
+.rap-container .rap-slider {
+  @apply !h-[2px] !bg-[#33335b];
+}
+.rap-container .rap-controls span {
+  @apply text-[15px];
+}
+.rap-volume-btn.rap-volume-open svg path {
+  @apply fill-white;
+}
+.rap-volume-controls {
+  @apply !bg-primary/80;
+}
+
+.active {
+  @apply  border-b-4 border-accent  ;
+}
+
+/* AlbumSlider */
+#discography .swiper:first-child {
+  @apply h-fit ;
+}
+#discography .swiper:first-child .swiper-wrapper {
+  @apply   md:h-fit md:max-h-[640px];
+}
+.album-slider .rap-container .rap-volume .rap-volume-controls {
+  @apply  !bg-accent
+}
+.album-slider .rap-container .rap-slider {
+  @apply  !bg-primary/40
+}
+.album-slider .rap-container .rap-slider .rap-progress {
+  @apply  !bg-white
+}
+.album-slider .rap-container .rap-pp-button svg {
+  @apply  w-[12px];
+}
+.album-slider .rap-container .rap-volume .rap-volume-btn svg {
+  @apply  w-[20px];
+}
+.album-slider .rap-container .rap-pp-button svg path,
+.album-slider .rap-container .rap-volume .rap-volume-btn svg path {
+  @apply fill-accent;
+}
+.album-slider .rap-container .rap-controls span {
+  @apply  !text-sm;
+}
+.album-player {
+  @apply !w-[110px] !min-w-0 text-center;  
+}
+.album-player .rap-controls .rap-slider,
+.album-player .rap-controls .rap-total-time {
+  @apply hidden;  
+}
+.thumb-slider .swiper-slide-thumb-active {
+  @apply border-2 border-accent overflow-hidden transition-all duration-700;
+}

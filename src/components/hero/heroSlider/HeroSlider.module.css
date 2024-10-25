@@ -1,0 +1,75 @@
+.swiperSlideContent {
+    width: 275px;
+    height: 275px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    border: 3px solid white; 
+    border-radius: 10px; 
+    overflow: hidden;
+}
+
+.swiperSlideContent img {
+    width: 275px !important;
+    height: 275px !important;
+}
+
+.slideText {
+    display: flex; /* Ocultar el texto por defecto */
+    /* width: 300px;
+    height: 300px; */
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    /*margin-left: 20px;  Espacio entre la imagen y el texto */
+    /* border:1px solid yellow; */
+    background-color: black;
+}
+
+.swiper-slide-active .slideText {
+    display: flex; /* Mostrar el texto solo para el slide activo */
+    width: 275px ;
+    height: 275px ;
+}
+
+.swiperSlideAuthor {
+    font-size: 22px;
+    /* color: #fff; */
+    text-align: left;
+}
+
+.slideText p {
+    margin: 5px 0;
+    color: #fff;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .swiperSlideContent {
+        width: 300px !important;
+        height: 300px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        /* border: 1px solid red; */
+    }
+    
+    .swiperSlideContent img {
+        width: 300px !important;
+        height: 300px !important;
+    }
+    .swiper-slide-active .slideText {
+        display: flex; /* Mostrar el texto solo para el slide activo */
+        width: 100% !important;
+        height: auto !important;
+    }
+    .swiperSlideAuthor,
+    .slideText p {
+        /*font-size: 18px;
+         color: #fff; */
+        text-align: left;
+    }
+ 
+}
